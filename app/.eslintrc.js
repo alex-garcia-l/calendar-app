@@ -19,6 +19,6 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'space-before-function-paren': ['error', 'never'],
-    "jsx-quotes": ["error", "prefer-double"],
+    'jsx-quotes': ['error', 'prefer-double'],
   },
 };

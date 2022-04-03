@@ -25,7 +25,7 @@ UserSchema.methods.toJSON = function () {
   let { password, _id, ...data } = this.toObject();
 
   data = {
-    id: _id,
+    uid: _id,
     ...data,
   };
 

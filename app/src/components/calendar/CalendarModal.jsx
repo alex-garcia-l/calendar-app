@@ -6,7 +6,7 @@ import moment from 'moment';
 import Swal from 'sweetalert2';
 
 import { uiCloseModal } from '../../actions/ui';
-import { calendarCleanActive, calendarEventAddNew, calendarUpdated } from '../../actions/calendar';
+import { calendarCleanActive, calendarEventStartAddNew, calendarEventStartUpdate } from '../../actions/calendar';
 
 import 'react-datetime-picker/dist/DateTimePicker.css';
 import 'react-calendar/dist/Calendar.css';
@@ -93,21 +93,13 @@ export const CalendarModal = () => {
         ...errors,
         title: 'Ingresa un título',
       });
+      return;
     }
 
     if (activeEvent) {
-      dispatch(calendarUpdated(formValues));
+      dispatch(calendarEventStartUpdate(formValues));
     } else {
-      dispatch(
-        calendarEventAddNew({
-          ...formValues,
-          id: new Date().getTime(),
-          user: {
-            uid: '1234',
-            name: 'Name 2',
-          },
-        })
-      );
+      dispatch(calendarEventStartAddNew(formValues));
     }
 
     closeModal();

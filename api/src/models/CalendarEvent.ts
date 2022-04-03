@@ -32,7 +32,7 @@ CalendarEventSchema.methods.toJSON = function () {
   let { _id, ...data } = this.toObject();
 
   data = {
-    id: _id,
+    uid: _id,
     ...data,
   };
 

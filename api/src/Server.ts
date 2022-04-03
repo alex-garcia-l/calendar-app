@@ -1,5 +1,5 @@
 import express, { Application, Request, Response } from 'express';
-import cors from 'express';
+import cors from 'cors';
 
 import { APP_PORT, SERVER_PATH, SERVER_API_PATH, RELATIVE_API_PATH } from './config/app';
 import { connectMongoDB } from './config/database/mongoDB';

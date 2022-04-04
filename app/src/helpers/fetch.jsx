@@ -1,4 +1,5 @@
-const BASE_URL = import.meta.env.VITE_APP_API_URL;
+const BASE_URL = 'http://localhost:8081/api/v1/calendar-events';
+// const BASE_URL = import.meta.env.VITE_APP_API_URL;
 
 export const fetchNotToken = (endpoind, data = {}, method = 'GET') => {
   const url = `${BASE_URL}/${endpoind}`;

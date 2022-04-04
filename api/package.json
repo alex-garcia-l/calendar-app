@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./dist/app.js",
+    "dev": "nodemon ./dist/index.js",
     "tsc": "tsc --watch",
-    "start": "tsc && node ./dist/app.js",
+    "start": "tsc && node ./dist/index.js",
     "format:check": "prettier --check .",
     "format:write": "prettier --write .",
     "lint:check": "eslint .",
